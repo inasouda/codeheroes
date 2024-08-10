@@ -43,10 +43,7 @@ import MyCarousel from './components/Carousel';
 
 const App = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const imageSrc = useBreakpointValue({
-    base: codeHeroesImage,
-    md: codeHeroesImage,
-  });
+
   const images = [
     codeHeroesImage,
     codeHeroesCarImg,
