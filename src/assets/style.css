@@ -1,0 +1,16 @@
+
+    /* Navigation Bar */
+    .navbar {
+        background-image: linear-gradient(to right, red, blue); /* Red to blue gradient */
+        font-family: 'Comic Sans MS', cursive;
+    }
+
+    /* Home Page Content */
+    .home-content {
+        background-image: linear-gradient(to right, red, blue); /* Red to blue gradient */
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: 'Comic Sans MS', cursive;
+    }
+
