@@ -90,10 +90,10 @@ const RegistrationForm: React.FC = () => {
           {/* Left Column: Personal Information */}
           <Box>
             <Box bg="cyan.50" p={4} borderRadius="md" mb={{ base: 4, lg: 0 }}>
-              <Heading size="md" mb={4} fontSize="1.5rem">Personal Information</Heading>
+              <Heading size="md" mb={4}>Personal Information</Heading>
               <Stack spacing={4}>
                 <FormControl id="name" isRequired>
-                  <FormLabel fontWeight="bold" fontSize="1.1rem">Name</FormLabel>
+                  <FormLabel fontWeight="bold">Name</FormLabel>
                   <Input
                     type="text"
                     id="name"
@@ -105,7 +105,7 @@ const RegistrationForm: React.FC = () => {
                 </FormControl>
 
                 <FormControl id="email" isRequired>
-                  <FormLabel fontWeight="bold" fontSize="1.1rem">Email</FormLabel>
+                  <FormLabel fontWeight="bold">Email</FormLabel>
                   <Input
                     type="email"
                     id="email"
@@ -117,7 +117,7 @@ const RegistrationForm: React.FC = () => {
                 </FormControl>
 
                 <FormControl id="phone" isRequired>
-                  <FormLabel fontWeight="bold" fontSize="1.1rem">Phone Number</FormLabel>
+                  <FormLabel fontWeight="bold">Phone Number</FormLabel>
                   <Input
                     type="tel"
                     id="phone"
@@ -129,7 +129,7 @@ const RegistrationForm: React.FC = () => {
                 </FormControl>
 
                 <FormControl id="address" isRequired>
-                  <FormLabel fontWeight="bold" fontSize="1.1rem">Address</FormLabel>
+                  <FormLabel fontWeight="bold">Address</FormLabel>
                   <Input
                     type="text"
                     id="address"
@@ -148,10 +148,10 @@ const RegistrationForm: React.FC = () => {
             <Stack spacing={8}>
               {/* Academic and Experience Section */}
               <Box bg="red.50" p={4} borderRadius="md">
-                <Heading size="md" mb={4} fontSize="1.5rem">Academic and Experience</Heading>
+                <Heading size="md" mb={4}>Academic and Experience</Heading>
                 <Stack spacing={4}>
                   <FormControl id="grade" isRequired>
-                    <FormLabel fontWeight="bold" fontSize="1.1rem">Grade</FormLabel>
+                    <FormLabel fontWeight="bold">Grade</FormLabel>
                     <Select
                       id="grade"
                       placeholder="Select your grade"
@@ -168,7 +168,7 @@ const RegistrationForm: React.FC = () => {
                   </FormControl>
 
                   <FormControl as="fieldset" isRequired>
-                    <FormLabel as="legend" fontWeight="bold" fontSize="1.1rem">Do you have any experience in coding?</FormLabel>
+                    <FormLabel as="legend" fontWeight="bold">Do you have any experience in coding?</FormLabel>
                     <RadioGroup
                       onChange={handleCodingExperienceChange}
                       value={formData.codingExperience}
@@ -184,10 +184,10 @@ const RegistrationForm: React.FC = () => {
 
               {/* Consent and Scheduling Section */}
               <Box bg="cyan.50" p={4} borderRadius="md">
-                <Heading size="md" mb={4} fontSize="1.5rem">Consent and Scheduling</Heading>
+                <Heading size="md" mb={4} >Consent and Scheduling</Heading>
                 <Stack spacing={4}>
                   <FormControl as="fieldset" id="photoConsent" isRequired>
-                    <FormLabel as="legend" fontWeight="bold" fontSize="1.1rem">Do you agree to share photos on the website?</FormLabel>
+                    <FormLabel as="legend" fontWeight="bold">Do you agree to share photos on the website?</FormLabel>
                     <RadioGroup
                       onChange={handlePhotoConsentChange}
                       value={formData.photoConsent}
@@ -200,7 +200,7 @@ const RegistrationForm: React.FC = () => {
                   </FormControl>
 
                   <FormControl id="lessonDay" isRequired>
-                    <FormLabel fontWeight="bold" fontSize="1.1rem">Choose your lesson day</FormLabel>
+                    <FormLabel fontWeight="bold">Choose your lesson day</FormLabel>
                     <Select
                       id="lessonDay"
                       placeholder="Select a day"
@@ -217,9 +217,9 @@ const RegistrationForm: React.FC = () => {
 
               {/* Additional Information Section */}
               <Box bg="red.50" p={4} borderRadius="md">
-                <Heading size="md" mb={4} fontSize="1.5rem">Additional Information</Heading>
+                <Heading size="md" mb={4} >Additional Information</Heading>
                 <FormControl id="comments">
-                  <FormLabel fontWeight="bold" fontSize="1.1rem">Comments</FormLabel>
+                  <FormLabel fontWeight="bold">Comments</FormLabel>
                   <Textarea
                     id="comments"
                     value={formData.comments}
