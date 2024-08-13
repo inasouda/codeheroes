@@ -19,9 +19,10 @@ import {
 interface FormData {
   name: string;
   email: string;
- 
   phone: string;
   address: string;
+  gender: string;
+  dob: string;
   codingExperience: string;
   grade: string;
   photoConsent: string;
@@ -33,9 +34,10 @@ const RegistrationForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
-
     phone: '',
     address: '',
+    gender: '',
+    dob: '',
     codingExperience: '',
     grade: '',
     photoConsent: '',
@@ -81,7 +83,16 @@ const RegistrationForm: React.FC = () => {
   };
 
   return (
-    <Box maxW="4xl" mx="auto" mt={8} p={6} borderWidth={1} borderRadius="lg" boxShadow="lg">
+    <Box
+      maxW={{ base: 'full', sm: 'md', lg: '4xl' }}
+      mx="auto"
+      mt={8}
+      p={6}
+      borderWidth={1}
+      borderRadius="lg"
+      boxShadow="lg"
+      bg="white"
+    >
       <Heading mb={6} textAlign="center" color="cyan.600" fontSize="2rem">
         Register
       </Heading>
@@ -139,6 +150,32 @@ const RegistrationForm: React.FC = () => {
                     fontSize="1rem"
                   />
                 </FormControl>
+
+                <FormControl id="gender" isRequired>
+                  <FormLabel fontWeight="bold">Gender</FormLabel>
+                  <Select
+                    id="gender"
+                    placeholder="Select your gender"
+                    value={formData.gender}
+                    onChange={handleChange}
+                    fontSize="1rem"
+                  >
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </Select>
+                </FormControl>
+
+                <FormControl id="dob" isRequired>
+                  <FormLabel fontWeight="bold">Date of Birth</FormLabel>
+                  <Input
+                    type="date"
+                    id="dob"
+                    value={formData.dob}
+                    onChange={handleChange}
+                    fontSize="1rem"
+                  />
+                </FormControl>
               </Stack>
             </Box>
           </Box>
@@ -184,7 +221,7 @@ const RegistrationForm: React.FC = () => {
 
               {/* Consent and Scheduling Section */}
               <Box bg="cyan.50" p={4} borderRadius="md">
-                <Heading size="md" mb={4} >Consent and Scheduling</Heading>
+                <Heading size="md" mb={4}>Consent and Scheduling</Heading>
                 <Stack spacing={4}>
                   <FormControl as="fieldset" id="photoConsent" isRequired>
                     <FormLabel as="legend" fontWeight="bold">Do you agree to share photos on the website?</FormLabel>
@@ -217,7 +254,7 @@ const RegistrationForm: React.FC = () => {
 
               {/* Additional Information Section */}
               <Box bg="red.50" p={4} borderRadius="md">
-                <Heading size="md" mb={4} >Additional Information</Heading>
+                <Heading size="md" mb={4}>Additional Information</Heading>
                 <FormControl id="comments">
                   <FormLabel fontWeight="bold">Comments</FormLabel>
                   <Textarea
