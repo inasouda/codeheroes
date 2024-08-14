@@ -14,7 +14,7 @@ import {
   ListIcon,
   Icon,
 } from '@chakra-ui/react';
-import { FaAward, FaHighlighter,FaUsers,FaAddressBook,FaEnvelope, FaPhone, FaRocket, FaLightbulb, FaCode, FaSuperpowers, FaLaptopCode} from 'react-icons/fa';
+import { FaAward,FaUsers, FaRocket, FaLightbulb, FaCode, FaSuperpowers, FaLaptopCode} from 'react-icons/fa';
 import codeHeroesImage from './assets/codeheroes8.png';
 import codeHeroesCarImg2 from './assets/car1.jpg';
 import codeHeroesCarImg from './assets/car3.jpg';
@@ -30,6 +30,7 @@ import jsImage from './assets/js.png';
 import bsImage from './assets/bootstrap.svg.png';
 
 import MyCarousel from './components/Carousel';
+import ContactUs from './components/ContactUs';
 
 const Home = () => {
 
@@ -271,28 +272,7 @@ const Home = () => {
         </Container>
       </Box>
 
-      {/* Contact Us Section */}
-      <Box bg="#f0f4f8" py={10} px={4}id="contact-us">
-        <Container maxW="container.xl">
-          <Heading display={'flex'} color={'blue.600'} alignItems={'center'} justifyContent={'center'} gap='0.5rem' as="h2" size="lg" mb={4}>
-                <Icon as={FaAddressBook} color="yellow.500" fontSize={'2rem'}  /> Contact Us 
-          </Heading>
-          <VStack spacing={4}>
-            {/* <Image src={contactUsImage} borderRadius="lg" alt="Contact Us Image" /> */}
-            <Text>
-            <Icon as={FaHighlighter} color="yellow.500" mr={2} />
-              Have questions or want to get in touch? We're here to help! Reach out to us via email or phone, and we'll get back to you as soon as possible.
-            </Text>
-            <Text display={'flex'} gap={'2'} alignItems={'center'}>
-              <Icon as={FaEnvelope} color="red.500" fontSize={'1.2rem'} /> contact@codeheroes.com
-             
-            </Text>
-            <Text display={'flex'} gap={'2'} alignItems={'center'}>
-              <Icon as={FaPhone} color="blue.500" fontSize={'1.2rem'} />  Phone: 123-456-7890
-            </Text>
-          </VStack>
-        </Container>
-      </Box>
+      <ContactUs></ContactUs>
     </Box>
   );
 };
