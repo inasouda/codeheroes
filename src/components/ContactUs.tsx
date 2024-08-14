@@ -12,7 +12,7 @@ import {FaHighlighter,FaAddressBook,FaEnvelope, FaPhone} from 'react-icons/fa';
 const ContactUs = () => {
   return (
     <div> {/* Contact Us Section */}
-    <Box bg="#f0f4f8" py={10} px={4}id="contact-us">
+    <Box bg="#f0f4f8" py={10} px={4} id="contact-us">
       <Container maxW="container.xl">
         <Heading display={'flex'} color={'blue.600'} alignItems={'center'} justifyContent={'center'} gap='0.5rem' as="h2" size="lg" mb={4}>
               <Icon as={FaAddressBook} color="yellow.500" fontSize={'2rem'}  /> Contact Us 

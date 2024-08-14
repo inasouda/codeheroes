@@ -13,6 +13,7 @@ import {
   ListItem,
   ListIcon,
   Icon,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { FaAward,FaUsers, FaRocket, FaLightbulb, FaCode, FaSuperpowers, FaLaptopCode} from 'react-icons/fa';
 import codeHeroesImage from './assets/codeheroes8.png';
@@ -31,6 +32,7 @@ import bsImage from './assets/bootstrap.svg.png';
 
 import MyCarousel from './components/Carousel';
 import ContactUs from './components/ContactUs';
+import ParentOpinion from './components/ParentOpinion';
 
 const Home = () => {
 
@@ -272,6 +274,41 @@ const Home = () => {
         </Container>
       </Box>
 
+  {/* Parent Opinions Section */}
+  <Box py={10} px={4} mt={10} bg="cyan.50" borderRadius="lg">
+        <Container maxW="container.xl">
+          <Heading as="h2" size="lg" mb={8} textAlign="center" color="blue.600">
+            What Parents Say
+          </Heading>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+            <ParentOpinion 
+              imageSrc='' 
+              parentName='Rasha Elkassa' 
+              opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
+            />
+            <ParentOpinion 
+              imageSrc='' 
+              parentName='Noha ElKaddah' 
+              opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
+            />
+            <ParentOpinion 
+              imageSrc='' 
+              parentName='Lama' 
+              opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
+            />
+            <ParentOpinion 
+              imageSrc='' 
+              parentName='Noha Fathy' 
+              opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
+            />
+            <ParentOpinion 
+              imageSrc='' 
+              parentName='Nourham' 
+              opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
+            />
+          </SimpleGrid>
+        </Container>
+      </Box>
       <ContactUs></ContactUs>
     </Box>
   );
