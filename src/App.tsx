@@ -4,6 +4,7 @@ import Home from './Home';
 import RegistrationForm from './pages/registration';
 import NavBar from './components/NavBar';
 import FreeLessonForm from './pages/FreeLesson';
+import NotFound from './NotFound';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<RegistrationForm />} />
           <Route path="/free-lesson" element={<FreeLessonForm />} />
+          <Route path="*" element={<NotFound />} />
 
           {/* Add more routes here for other components/pages */}
         </Routes>
