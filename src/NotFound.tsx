@@ -33,5 +33,4 @@ const NotFound: React.FC = () => {
     </Center>
   );
 };
-
 export default NotFound;
