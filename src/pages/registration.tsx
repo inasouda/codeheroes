@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import {
   Box,
   Button,
@@ -67,19 +68,49 @@ const RegistrationForm: React.FC = () => {
     setFormData((prev) => ({ ...prev, photoConsent: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Handle form submission logic here
-    console.log(formData);
-    toast({
-      title: 'Account created.',
-      description: 'Your account has been successfully created.',
-      status: 'success',
-      duration: 5000,
-      isClosable: true,
-    });
-    setIsSubmitting(false);
+  
+    try {
+      const response = await axios.post('https://codeheroes-server-66c05a244ff2.herokuapp.com/api/v1/students', formData);
+  
+      // Handle the response from the server
+      toast({
+        title: 'Registration successful.',
+        description: response.data.message || 'Your registration has been successfully submitted.',
+        status: 'success',
+        duration: 5000,
+        isClosable: true,
+      });
+  
+      // Optionally, you can reset the form or navigate to another page here
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+        gender: '',
+        dob: '',
+        codingExperience: '',
+        grade: '',
+        photoConsent: '',
+        lessonDay: '',
+        comments: '',
+      });
+  
+    } catch (error: any) {
+      // Handle errors
+      toast({
+        title: 'Registration failed.',
+        description: error.response?.data.message || error.message,
+        status: 'error',
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -164,9 +195,8 @@ const RegistrationForm: React.FC = () => {
                                 onChange={handleChange}
                                 fontSize="1rem"
                             >
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
                             </Select>
                             </FormControl>
 
@@ -203,11 +233,27 @@ const RegistrationForm: React.FC = () => {
                       onChange={handleChange}
                       fontSize="1rem"
                     >
-                      {Array.from({ length: 10 }, (_, i) => i + 3).map((grade) => (
+                      {/* {Array.from({ length: 10 }, (_, i) => i + 3).map((grade) => (
                         <option key={grade} value={grade}>
                           {grade}
                         </option>
-                      ))}
+                      ))} */}
+                            <option value="" label="Select grade" />
+                        {/* <option value="PRE-K" label="PRE-K" />
+                        <option value="Kindergarten" label="Kindergarten" />
+                        <option value="Grade 1" label="Grade 1" />
+                        <option value="Grade 2" label="Grade 2" />
+                        <option value="Grade 3" label="Grade 3" /> */}
+                        <option value="Grade 4" label="Grade 4" />
+                        <option value="Grade 5" label="Grade 5" />
+                        <option value="Grade 6" label="Grade 6" />
+                        <option value="Grade 7" label="Grade 7" />
+                        <option value="Grade 8" label="Grade 8" />
+                        <option value="Grade 9" label="Grade 9" />
+                        <option value="Grade 10" label="Grade 10" />
+                        <option value="Grade 11" label="Grade 11" />
+                        <option value="Grade 12" label="Grade 12" />
+               
                     </Select>
                   </FormControl>
 
