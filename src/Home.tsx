@@ -17,8 +17,7 @@ import {
 } from '@chakra-ui/react';
 import { FaAward,FaUsers, FaRocket, FaLightbulb, FaCode, FaSuperpowers, FaLaptopCode} from 'react-icons/fa';
 import codeHeroesImage from './assets/codeheroes8.png';
-import codeHeroesCarImg2 from './assets/car1.jpg';
-import codeHeroesCarImg from './assets/car3.jpg';
+import codeHeroesCarImg from './assets/laila.jpg';
 
 import missionImage from './assets/ch2.jpg';
 import programsImage from './assets/programs.jpg';
@@ -33,14 +32,13 @@ import bsImage from './assets/bootstrap.svg.png';
 import MyCarousel from './components/Carousel';
 import ContactUs from './components/ContactUs';
 import ParentOpinion from './components/ParentOpinion';
+import OurHeroes from './components/OurHeroes';
 
 const Home = () => {
 
   const images = [
     codeHeroesImage,
     codeHeroesCarImg,
-    codeHeroesCarImg2,
-
   ];
 
   return (
@@ -121,8 +119,14 @@ const Home = () => {
         </Container>
       </Box>
 
+      {/*Our Codeheroes section */}
+      {/* <Box py={8} px={4} bg="cyan.100" borderRadius="lg"> */}
+      <OurHeroes />
+        
+      {/* </Box> */}
+      
       {/* Web Development Section */}
-      <Box bg="#f0f4f8" py={12} px={4} my={10} borderRadius="md" boxShadow="md" id="programs">
+      <Box bg="#f0f4f8" py={12} px={4}  borderRadius="md" boxShadow="md" id="programs">
         <Container maxW="container.xl">
           <Heading display={'flex'} color={'blue.600'} alignItems={'center'} justifyContent={'center'} gap='0.5rem' paddingBottom={'3rem'} as="h2" size="lg" mb={4}>
                 <Icon as={FaLaptopCode} color="red.600" fontSize={'2rem'}  /> Our Programs  
@@ -228,13 +232,11 @@ const Home = () => {
       </Box>
 
 
-
-
       {/* About Us Section */}
       <Box  py={10} px={4} my={2} id="about-us">
         <Container maxW="container.xl">
           <Heading display={'flex'} color={'blue.600'} alignItems={'center'} justifyContent={'center'} gap='0.5rem' as="h2" size="lg" mb={4}>
-                <Icon as={FaUsers} color="teal.500" fontSize={'2rem'}  /> About Us 
+                <Icon as={FaUsers} color="cyan.500" fontSize={'2rem'}  /> About Us 
           </Heading>
         
           <VStack spacing={4}>
@@ -248,7 +250,7 @@ const Home = () => {
             <Box display="flex" >
               <Icon as={FaUsers} color="green.500" mr={2} />
               <Text>
-                At CodeHeroes, we are more than just a team — we are passionate advocates for coding education tailored for kids. Our mission is simple yet profound: to make coding not only accessible but also enjoyable for children aged 9 to 15.
+                At CodeHeroes, we are more than just a team — we are passionate advocates for coding education tailored for kids. Our mission is simple yet profound: to make coding not only accessible but also enjoyable for children aged 9 to 18.
               </Text>
             </Box>
             <Box display="flex" >
