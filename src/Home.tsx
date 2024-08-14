@@ -33,6 +33,8 @@ import ParentOpinion from './components/ParentOpinion';
 import OurHeroes from './components/OurHeroes';
 import lama from './assets/lama.jpg'
 import noha from './assets/noha.jpg'
+import rasha from './assets/rasha.jpg'
+
 
 
 const Home = () => {
@@ -284,7 +286,7 @@ const Home = () => {
           </Heading>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
             <ParentOpinion 
-              imageSrc='' 
+              imageSrc={rasha} 
               parentName='Rasha Elkassas' 
               opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
             />
@@ -296,7 +298,7 @@ const Home = () => {
             <ParentOpinion 
               imageSrc={lama}
               parentName='Lama' 
-              opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
+              opinion='My children are blessed and lucky to have such an incredible coding teacher like Ms. Inas. She is truly dedicated and genuinely passionate about her work. My children learned a lot from the program which they will carry with them for their future education journey. I DO highly recommend taking this program since it will definitely contribute to your children’s knowledge. Thank you Ms. Inas for all your invaluable efforts.' 
             />
             <ParentOpinion 
               imageSrc={noha}
