@@ -275,15 +275,15 @@ const Home = () => {
       </Box>
 
   {/* Parent Opinions Section */}
-  <Box py={10} px={4} mt={10} bg="cyan.50" borderRadius="lg">
+  <Box py={10} px={4} mt={10} bg="cyan.500" borderRadius="lg">
         <Container maxW="container.xl">
-          <Heading as="h2" size="lg" mb={8} textAlign="center" color="blue.600">
+          <Heading as="h2" size="lg" mb={8} textAlign="center" color="white">
             What Parents Say
           </Heading>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
             <ParentOpinion 
               imageSrc='' 
-              parentName='Rasha Elkassa' 
+              parentName='Rasha Elkassas' 
               opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
             />
             <ParentOpinion 
