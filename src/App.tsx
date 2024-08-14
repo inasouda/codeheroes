@@ -16,7 +16,6 @@ const App = () => {
           <Route path="/register" element={<RegistrationForm />} />
           <Route path="/free-lesson" element={<FreeLessonForm />} />
           <Route path="*" element={<NotFound />} />
-          {/* Add more routes here for other components/pages */}
         </Routes>
       </Router>
   </ChakraProvider>
