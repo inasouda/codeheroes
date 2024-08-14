@@ -84,99 +84,103 @@ const RegistrationForm: React.FC = () => {
 
   return (
     <Box
-      maxW={{ base: 'full', sm: 'md', lg: '4xl' }}
+      maxW={'100vw'}
       mx="auto"
-      mt={8}
+      m={8}
       p={6}
+      bg="cyan.50"
       borderWidth={1}
       borderRadius="lg"
       boxShadow="lg"
-      bg="white"
     >
-      <Heading mb={6} textAlign="center" color="cyan.600" fontSize="2rem">
+      <Heading mb={8}  textAlign="center" color="cyan.600" fontSize="2rem">
         Register
       </Heading>
       <form onSubmit={handleSubmit}>
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={8}>
           {/* Left Column: Personal Information */}
           <Box>
-            <Box bg="cyan.50" p={4} borderRadius="md" mb={{ base: 4, lg: 0 }}>
-              <Heading size="md" mb={4}>Personal Information</Heading>
-              <Stack spacing={4}>
-                <FormControl id="name" isRequired>
-                  <FormLabel fontWeight="bold">Name</FormLabel>
-                  <Input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Enter your name"
-                    fontSize="1rem"
-                  />
-                </FormControl>
+            <Box bg="white"   
+                borderWidth={1}
+                borderRadius="lg"
+                boxShadow="lg" 
+                p={4}  mb={{ base: 4, lg: 0 }}>
+                        <Heading size="md" mb={4}>Personal Information</Heading>
+                        <Stack spacing={4}>
+                            <FormControl id="name" isRequired>
+                            <FormLabel fontWeight="bold">Name</FormLabel>
+                            <Input
+                                type="text"
+                                id="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                placeholder="Enter your name"
+                                fontSize="1rem"
+                            />
+                            </FormControl>
 
-                <FormControl id="email" isRequired>
-                  <FormLabel fontWeight="bold">Email</FormLabel>
-                  <Input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Enter your email"
-                    fontSize="1rem"
-                  />
-                </FormControl>
+                            <FormControl id="email" isRequired>
+                            <FormLabel fontWeight="bold">Email</FormLabel>
+                            <Input
+                                type="email"
+                                id="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="Enter your email"
+                                fontSize="1rem"
+                            />
+                            </FormControl>
 
-                <FormControl id="phone" isRequired>
-                  <FormLabel fontWeight="bold">Phone Number</FormLabel>
-                  <Input
-                    type="tel"
-                    id="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="Enter your phone number"
-                    fontSize="1rem"
-                  />
-                </FormControl>
+                            <FormControl id="phone" isRequired>
+                            <FormLabel fontWeight="bold">Phone Number</FormLabel>
+                            <Input
+                                type="tel"
+                                id="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                placeholder="Enter your phone number"
+                                fontSize="1rem"
+                            />
+                            </FormControl>
 
-                <FormControl id="address" isRequired>
-                  <FormLabel fontWeight="bold">Address</FormLabel>
-                  <Input
-                    type="text"
-                    id="address"
-                    value={formData.address}
-                    onChange={handleChange}
-                    placeholder="Enter your address"
-                    fontSize="1rem"
-                  />
-                </FormControl>
+                            <FormControl id="address" isRequired>
+                            <FormLabel fontWeight="bold">Address</FormLabel>
+                            <Input
+                                type="text"
+                                id="address"
+                                value={formData.address}
+                                onChange={handleChange}
+                                placeholder="Enter your address"
+                                fontSize="1rem"
+                            />
+                            </FormControl>
 
-                <FormControl id="gender" isRequired>
-                  <FormLabel fontWeight="bold">Gender</FormLabel>
-                  <Select
-                    id="gender"
-                    placeholder="Select your gender"
-                    value={formData.gender}
-                    onChange={handleChange}
-                    fontSize="1rem"
-                  >
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                  </Select>
-                </FormControl>
+                            <FormControl id="gender" isRequired>
+                            <FormLabel fontWeight="bold">Gender</FormLabel>
+                            <Select
+                                id="gender"
+                                placeholder="Select your gender"
+                                value={formData.gender}
+                                onChange={handleChange}
+                                fontSize="1rem"
+                            >
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </Select>
+                            </FormControl>
 
-                <FormControl id="dob" isRequired>
-                  <FormLabel fontWeight="bold">Date of Birth</FormLabel>
-                  <Input
-                    type="date"
-                    id="dob"
-                    value={formData.dob}
-                    onChange={handleChange}
-                    fontSize="1rem"
-                  />
-                </FormControl>
-              </Stack>
+                            <FormControl id="dob" isRequired>
+                            <FormLabel fontWeight="bold">Date of Birth</FormLabel>
+                            <Input
+                                type="date"
+                                id="dob"
+                                value={formData.dob}
+                                onChange={handleChange}
+                                fontSize="1rem"
+                            />
+                            </FormControl>
+                        </Stack>
             </Box>
           </Box>
 
@@ -184,7 +188,10 @@ const RegistrationForm: React.FC = () => {
           <Box>
             <Stack spacing={8}>
               {/* Academic and Experience Section */}
-              <Box bg="red.50" p={4} borderRadius="md">
+              <Box bg="white" p={4} 
+               borderWidth={1}
+               borderRadius="lg"
+               boxShadow="lg">
                 <Heading size="md" mb={4}>Academic and Experience</Heading>
                 <Stack spacing={4}>
                   <FormControl id="grade" isRequired>
@@ -217,43 +224,49 @@ const RegistrationForm: React.FC = () => {
                     </RadioGroup>
                   </FormControl>
                 </Stack>
-              </Box>
+            </Box>
 
               {/* Consent and Scheduling Section */}
-              <Box bg="cyan.50" p={4} borderRadius="md">
+            <Box bg="white" p={4}
+             borderWidth={1}
+             borderRadius="lg"
+             boxShadow="lg">
                 <Heading size="md" mb={4}>Consent and Scheduling</Heading>
                 <Stack spacing={4}>
-                  <FormControl as="fieldset" id="photoConsent" isRequired>
+                <FormControl as="fieldset" id="photoConsent" isRequired>
                     <FormLabel as="legend" fontWeight="bold">Do you agree to share photos on the website?</FormLabel>
                     <RadioGroup
-                      onChange={handlePhotoConsentChange}
-                      value={formData.photoConsent}
+                    onChange={handlePhotoConsentChange}
+                    value={formData.photoConsent}
                     >
-                      <Stack direction="row">
+                    <Stack direction="row">
                         <Radio value="yes" fontSize="1rem">Yes</Radio>
                         <Radio value="no" fontSize="1rem">No</Radio>
-                      </Stack>
+                    </Stack>
                     </RadioGroup>
-                  </FormControl>
+                </FormControl>
 
-                  <FormControl id="lessonDay" isRequired>
+                <FormControl id="lessonDay" isRequired>
                     <FormLabel fontWeight="bold">Choose your lesson day</FormLabel>
                     <Select
-                      id="lessonDay"
-                      placeholder="Select a day"
-                      value={formData.lessonDay}
-                      onChange={handleChange}
-                      fontSize="1rem"
+                    id="lessonDay"
+                    placeholder="Select a day"
+                    value={formData.lessonDay}
+                    onChange={handleChange}
+                    fontSize="1rem"
                     >
-                      <option value="wednesday">Wednesday at 6:30 PM (2 hours)</option>
-                      <option value="thursday">Thursday at 6:30 PM (2 hours)</option>
+                    <option value="wednesday">Wednesday at 6:30 PM (2 hours)</option>
+                    <option value="thursday">Thursday at 6:30 PM (2 hours)</option>
                     </Select>
-                  </FormControl>
+                </FormControl>
                 </Stack>
-              </Box>
+            </Box>
 
               {/* Additional Information Section */}
-              <Box bg="red.50" p={4} borderRadius="md">
+              <Box bg="white" p={4} 
+               borderWidth={1}
+               borderRadius="lg"
+               boxShadow="lg">
                 <Heading size="md" mb={4}>Additional Information</Heading>
                 <FormControl id="comments">
                   <FormLabel fontWeight="bold">Comments</FormLabel>
