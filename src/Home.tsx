@@ -17,8 +17,6 @@ import {
 } from '@chakra-ui/react';
 import { FaAward,FaUsers, FaRocket, FaLightbulb, FaCode, FaSuperpowers, FaLaptopCode} from 'react-icons/fa';
 import codeHeroesImage from './assets/codeheroes8.png';
-import codeHeroesCarImg from './assets/laila.jpg';
-
 import missionImage from './assets/ch2.jpg';
 import programsImage from './assets/programs.jpg';
 import aboutUsImage from './assets/logoi.png';
@@ -33,12 +31,14 @@ import MyCarousel from './components/Carousel';
 import ContactUs from './components/ContactUs';
 import ParentOpinion from './components/ParentOpinion';
 import OurHeroes from './components/OurHeroes';
+import lama from './assets/lama.jpg'
+import noha from './assets/noha.jpg'
+
 
 const Home = () => {
 
   const images = [
     codeHeroesImage,
-    codeHeroesCarImg,
   ];
 
   return (
@@ -294,14 +294,27 @@ const Home = () => {
               opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
             />
             <ParentOpinion 
-              imageSrc='' 
+              imageSrc={lama}
               parentName='Lama' 
               opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
             />
             <ParentOpinion 
-              imageSrc='' 
+              imageSrc={noha}
               parentName='Noha Fathy' 
-              opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
+              opinion='I will write my son’s opinion about CodeHeros for:
+
+              What is good about codeheros 
+              if I am you I would sign my kids up for codeheros and I myself would continue in codeheros and here is why 
+              
+              - the best teacher in the whole entire world Mrs Inas
+              - you will learn a lot from this class 
+              - you will have fun with your other fellow students 
+              - And u will have the best time of your life 
+              
+              Everyone asked me if I will continue 
+              And my answer is yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+              100000000000% sure
+              - from Yahya Mahmoud a codeheros student' 
             />
             <ParentOpinion 
               imageSrc='' 
