@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Avatar, Text, Stack, Flex } from '@chakra-ui/react';
+import { Box, Avatar, Text, Flex } from '@chakra-ui/react';
 
 interface ParentOpinionProps {
   imageSrc: string;
