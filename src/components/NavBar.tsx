@@ -18,6 +18,7 @@ import {
 
 import { FaRocket, FaBars} from 'react-icons/fa';
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -31,8 +32,11 @@ const NavBar = () => {
         }
         else{
             window.location.href = `/#${id}`;
+            onClose();
+
         }
       };
+    
   return (
     <>   
     {/* Navigation Bar */}
@@ -59,9 +63,12 @@ const NavBar = () => {
               onClick={() => handleScrollTo('contact-us')}>                              
               Contact Us
             </Button>
-            <Button colorScheme="red" leftIcon={<FaRocket />}>
-              Try Free Lesson
-            </Button>
+            <Link to="/free-lesson">
+              <Button colorScheme="red" leftIcon={<FaRocket />} onClick={()=>onClose()}>
+                Try Free Lesson
+              </Button>
+          </Link>
+         
           </HStack>
           <IconButton
             aria-label="Open menu"
@@ -91,12 +98,14 @@ const NavBar = () => {
             <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }} onClick={() => {handleScrollTo('about-us')}}>
               About Us
             </Button>
-            <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }}onClick={() => {handleScrollTo('contact-us')}}>
+            <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }} onClick={() => {handleScrollTo('contact-us')}}>
               Contact Us
             </Button>
-            <Button colorScheme="red" leftIcon={<FaRocket />} onClick={onClose}>
-              Try Free Lesson
-            </Button>
+            <Link to="/free-lesson">
+              <Button colorScheme="red" leftIcon={<FaRocket />}  onClick={()=>onClose()}>
+                Try Free Lesson
+              </Button>
+            </Link>
           </VStack>
         </DrawerBody>
       </DrawerContent>
