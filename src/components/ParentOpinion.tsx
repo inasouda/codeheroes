@@ -11,8 +11,8 @@ const ParentOpinion: React.FC<ParentOpinionProps> = ({ imageSrc, parentName, opi
   return (
     <Box p={4} borderWidth={1} mb={4} borderRadius="lg" boxShadow="lg" maxW="md" mx="auto" bg="white">
       <Flex alignItems="center">
-        <Avatar src={imageSrc} size="xl" mr={4} />
-        <Text fontSize="xl" fontWeight="bold" color="cyan.700">
+        <Avatar src={imageSrc} size="md" mr={4} />
+        <Text fontSize="md" fontWeight="bold" color="cyan.700">
           {parentName}
         </Text>
       </Flex>
