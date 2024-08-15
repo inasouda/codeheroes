@@ -76,7 +76,7 @@ const RegistrationForm: React.FC = () => {
   
     try {
       const response = await axios.post('https://codeheroes-server-66c05a244ff2.herokuapp.com/api/v1/students', formData);
-      navigate('/');
+      navigate('/confirmation');
       // Handle the response from the server
       toast({
         title: 'Registration successful.',
@@ -109,7 +109,7 @@ const RegistrationForm: React.FC = () => {
         status: 'error',
         duration: 5000,
         isClosable: true,
-      });
+      }); 
     } finally {
       setIsSubmitting(false);
     }

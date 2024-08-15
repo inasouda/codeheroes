@@ -5,6 +5,7 @@ import RegistrationForm from './pages/registration';
 import NavBar from './components/NavBar';
 import FreeLessonForm from './pages/FreeLesson';
 import NotFound from './NotFound';
+import ConfirmationPage from './pages/Confirmation';
 
 const App = () => {
   return (
@@ -15,11 +16,13 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<RegistrationForm />} />
           <Route path="/free-lesson" element={<FreeLessonForm />} />
+          <Route path="/confirmation" element={<ConfirmationPage />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
-  </ChakraProvider>
+    </ChakraProvider>
   );
-};
+}; 
 
 export default App;
