@@ -100,7 +100,7 @@ const FreeLessonForm: React.FC = () => {
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="Enter your phone number"
                 borderRadius="md"
-                borderColor="cyan.400"
+                borderColor="gray.300"
                 _focus={{ borderColor: "cyan.400", boxShadow: "none" }}
                 size="lg"
               />
