@@ -309,7 +309,7 @@ const Home = () => {
             <ParentOpinion 
               imageSrc={''} 
               parentName='Mohamed' 
-              opinion='Thank you, this program has really helped my kids improve their logical thinking.' 
+              opinion='Thank you, this program has really helped my kids improve their logical thinking, and I am looking forward to continuing,' 
             />
           </SimpleGrid>
         </Container>
