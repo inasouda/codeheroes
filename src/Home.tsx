@@ -259,8 +259,8 @@ const Home = () => {
       <Box id='our-heroes'>
         <OurHeroes />
        </Box>
-  {/* Parent Opinions Section */}
-  <Box py={10} bg="cyan.500" id='parents-opinion'>
+    {/* Parent Opinions Section */}
+    <Box py={10} bg="cyan.500" id='parents-opinion'>
         <Container maxW="container.xl">
           <Heading as="h2" size="lg" mb={12} textAlign="center" color="white">
             What Parents Say
@@ -273,19 +273,19 @@ const Home = () => {
             />
             <ParentOpinion 
               imageSrc={rasha} 
-              parentName='Rasha Elkassas' 
+              parentName='Rasha' 
               opinion= "It was always a wish to enroll my daughter in coding. We gave it a try and it worked really well. MY daughter really enjoyed the program. I wasn't sure until I attended her presentation at the end of the program and I was really impressed by her presentation and how she was able to create a web page with all the needed criteria and information. Thanks Mrs Inas for the dedicated  efforts and work with our children. I highly recommend the program and my daughter is looking forward for her next class. Thank again Mrs Inas "
             />
             <ParentOpinion 
               imageSrc={nohak} 
-              parentName='Noha ElKaddah' 
+              parentName='Noha' 
               opinion='Thanks so much Inas for teaching this course that was a great opportunity for my daughter to learn new skills that will help in her career development and make better use of her time instead of just playing on her phone.     
               I would like to mention what salma wrote "Thank u inas this means much to me. I had so much fun at code heroes, and I had so much fun 💗 - salma"' 
             />
          
             <ParentOpinion 
               imageSrc={noha}
-              parentName='Noha Fathy' 
+              parentName='Noha' 
               opinion='I will write my son’s opinion about CodeHeros for:
 
               What is good about codeheros 

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Button, Center, FormControl, FormLabel, Heading, Input, Radio, RadioGroup, Stack, useToast } from '@chakra-ui/react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 const FreeLessonForm: React.FC = () => {
   const [name, setName] = useState<string>('');
@@ -8,6 +10,7 @@ const FreeLessonForm: React.FC = () => {
   const [phone, setPhone] = useState<string>('');
   const [day, setDay] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
   const toast = useToast(); // Initialize the toast
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -21,12 +24,13 @@ const FreeLessonForm: React.FC = () => {
         phone,
         day,
       });
-      toast({
-        title: 'Form submitted successfully!',
-        status: 'success',
-        duration: 5000,
-        isClosable: true,
-      });
+      navigate('/confirmation');
+      // toast({
+      //   title: 'Form submitted successfully!',
+      //   status: 'success',
+      //   duration: 5000,
+      //   isClosable: true,
+      // });
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({

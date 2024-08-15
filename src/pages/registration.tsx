@@ -75,16 +75,16 @@ const RegistrationForm: React.FC = () => {
     setIsSubmitting(true);
   
     try {
-      const response = await axios.post('https://codeheroes-server-66c05a244ff2.herokuapp.com/api/v1/students', formData);
+      await axios.post('https://codeheroes-server-66c05a244ff2.herokuapp.com/api/v1/students', formData);
       navigate('/confirmation');
       // Handle the response from the server
-      toast({
-        title: 'Registration successful.',
-        description: response.data.message || 'Your registration has been successfully submitted.',
-        status: 'success',
-        duration: 5000,
-        isClosable: true,
-      });
+      // toast({
+      //   title: 'Registration successful.',
+      //   description: response.data.message || 'Your registration has been successfully submitted.',
+      //   status: 'success',
+      //   duration: 5000,
+      //   isClosable: true,
+      // });
   
       // Optionally, you can reset the form or navigate to another page here
       setFormData({
