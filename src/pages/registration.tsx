@@ -15,6 +15,7 @@ import {
   useToast,
   SimpleGrid,
 } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 // Define the type for form data
 interface FormData {
@@ -48,6 +49,7 @@ const RegistrationForm: React.FC = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const toast = useToast();
+  const navigate = useNavigate();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -74,7 +76,7 @@ const RegistrationForm: React.FC = () => {
   
     try {
       const response = await axios.post('https://codeheroes-server-66c05a244ff2.herokuapp.com/api/v1/students', formData);
-  
+      navigate('/');
       // Handle the response from the server
       toast({
         title: 'Registration successful.',
