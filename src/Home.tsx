@@ -31,6 +31,8 @@ import ParentOpinion from './components/ParentOpinion';
 import OurHeroes from './components/OurHeroes';
 import lama from './assets/lama.jpg'
 import noha from './assets/noha.jpg'
+import nohak from './assets/nohak.png'
+
 import rasha from './assets/rasha.jpg'
 import ProgramDetails from './components/ProgramDetails';
 
@@ -271,7 +273,7 @@ const Home = () => {
               opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
             />
             <ParentOpinion 
-              imageSrc='' 
+              imageSrc={nohak} 
               parentName='Noha ElKaddah' 
               opinion='Thanks so much Inas for teaching this course that was a great opportunity for my daughter to learn new skills that will help in her career development and make better use of her time instead of just playing on her phone.     
               I would like to mention what salma wrote "Thank u inas this means much to me. I had so much fun at code heroes, and I had so much fun 💗 - salma"' 
@@ -299,11 +301,11 @@ const Home = () => {
               100000000000% sure
               - from Yahya Mahmoud a codeheros student' 
             />
-            <ParentOpinion 
+            {/* <ParentOpinion 
               imageSrc='' 
               parentName='Nourham' 
               opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
-            />
+            /> */}
           </SimpleGrid>
         </Container>
       </Box>
