@@ -8,6 +8,7 @@ import {
   Icon,
 } from '@chakra-ui/react';
 import {FaHighlighter,FaAddressBook,FaEnvelope, FaPhone} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
   return (
@@ -32,7 +33,12 @@ const ContactUs = () => {
           </Text>
         </VStack>
       </Container>
-    </Box></div>
+     
+    </Box>
+    <Text fontSize="sm" textAlign={'center'} my={8} bg={'white'}>
+          &copy; {new Date().getFullYear()} The Code Heroes. All rights reserved.
+        </Text>
+    </div>
   )
 }
 
