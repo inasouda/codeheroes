@@ -42,56 +42,68 @@ const FreeLessonForm: React.FC = () => {
   };
 
   return (
-    <Center height="100vh" p={4}>
+    <Center minHeight="100vh" bg="cyan.500" p={4}>
       <Box
-        p={4}
+        p={8}
         borderWidth={1}
         borderColor="gray.200"
-        borderRadius="md"
-        boxShadow="md"
-        maxW="md"
+        borderRadius="lg"
+        boxShadow="lg"
+        maxW="lg"
         width="100%"
-        bg="red.50"
+        bg="white"
       >
-        <Heading mb={8} textAlign="center" color="cyan.600" fontSize="2rem">
+        <Heading mb={8} textAlign="left" color="cyan.600" fontSize="2xl">
           Request a Free Lesson
         </Heading>
         <form onSubmit={handleSubmit}>
-          <Stack spacing={4}>
+          <Stack spacing={6}>
             <FormControl isRequired>
-              <FormLabel fontWeight="bold" htmlFor="name">Student Name</FormLabel>
+              <FormLabel htmlFor="name" fontSize="lg" fontWeight="medium" color="gray.600">Student Name</FormLabel>
               <Input
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name"
+                borderRadius="md"
+                borderColor="gray.300"
+                _focus={{ borderColor: "cyan.400", boxShadow: "none" }}
+                size="lg"
               />
             </FormControl>
 
             <FormControl isRequired>
-              <FormLabel fontWeight="bold" htmlFor="email">Parent's Email</FormLabel>
+              <FormLabel htmlFor="email" fontSize="lg" fontWeight="medium" color="gray.600">Parent's Email</FormLabel>
               <Input
                 id="email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
+                borderRadius="md"
+                borderColor="gray.300"
+                _focus={{ borderColor: "cyan.400", boxShadow: "none" }}
+                size="lg"
               />
             </FormControl>
 
             <FormControl isRequired>
-              <FormLabel fontWeight="bold" htmlFor="phone">Parent's Phone</FormLabel>
+              <FormLabel htmlFor="phone" fontSize="lg" fontWeight="medium" color="gray.600">Parent's Phone</FormLabel>
               <Input
                 id="phone"
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="Enter your phone number"
+                borderRadius="md"
+                borderColor="cyan.400"
+                _focus={{ borderColor: "cyan.400", boxShadow: "none" }}
+                size="lg"
               />
             </FormControl>
 
             <FormControl isRequired>
-              <FormLabel fontWeight="bold" htmlFor="day">Preferred Lesson Day</FormLabel>
+              <FormLabel htmlFor="day" fontSize="lg" fontWeight="medium" color="gray.600">Preferred Lesson Day</FormLabel>
               <RadioGroup id="day" value={day} onChange={(value) => setDay(value)}>
                 <Stack direction="column">
                   <Radio value="Friday Aug 30, 5:00PM">Friday Aug 30, 5:00PM</Radio>
@@ -104,12 +116,14 @@ const FreeLessonForm: React.FC = () => {
             <Box mt={8}>
               <Button
                 type="submit"
-                color="white"
-                bgColor="cyan.500"
+                colorScheme="cyan"
+                color='white'
                 size="lg"
                 width="full"
                 isLoading={isSubmitting}
-                fontSize="1.2rem"
+                borderRadius="full"
+                fontSize="lg"
+                boxShadow="md"
               >
                 Submit
               </Button>
