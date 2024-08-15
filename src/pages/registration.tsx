@@ -360,13 +360,13 @@ const RegistrationForm: React.FC = () => {
         <Box mt={8}>
           <Button
             type="submit"
-            bgColor="blue.600"
+            bgColor="blue.500"
             color={'white'}
             size="lg"
             width="full"
             isLoading={isSubmitting}
             fontSize="1.2rem"
-            _hover={{ bgColor: "blue.500" }}
+            _hover={{ bgColor: "blue.600" }}
           >
             Submit
           </Button>
