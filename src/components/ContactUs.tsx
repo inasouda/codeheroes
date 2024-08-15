@@ -8,7 +8,6 @@ import {
   Icon,
 } from '@chakra-ui/react';
 import {FaHighlighter,FaAddressBook,FaEnvelope, FaPhone} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
   return (
