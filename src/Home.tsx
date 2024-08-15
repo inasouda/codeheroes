@@ -32,6 +32,7 @@ import OurHeroes from './components/OurHeroes';
 import lama from './assets/lama.jpg'
 import noha from './assets/noha.jpg'
 import rasha from './assets/rasha.jpg'
+import ProgramDetails from './components/ProgramDetails';
 
 
 
@@ -101,7 +102,7 @@ const Home = () => {
       <Box bg="#f0f4f8" py={12} px={4}  borderRadius="md" boxShadow="md" id="programs">
         <Container maxW="container.xl">
           <Heading display={'flex'} color={'blue.600'} alignItems={'center'} justifyContent={'center'} gap='0.5rem' paddingBottom={'3rem'} as="h2" size="lg" mb={4}>
-                <Icon as={FaLaptopCode} color="red.600" fontSize={'2rem'}  /> Our Programs  
+                <Icon as={FaLaptopCode} color="red.600" fontSize={'2rem'}  /> Our Program
           </Heading>
 
           <VStack spacing={12} align="center">
@@ -116,10 +117,16 @@ const Home = () => {
                       At CodeHeroes, we’re on a mission to inspire the next generation of coding heroes. Our programs are carefully crafted to introduce kids to the exciting world of web development in a fun and engaging way. Through hands-on projects and interactive learning experiences, we empower kids to unleash their creativity and explore the limitless possibilities of coding.
                     </Text>
                 </Box>
+                <ProgramDetails></ProgramDetails>
+
                 <Box flex="1" display={'flex'}  mt={3} justifyContent={'center'} textAlign="center">
+                
                     <Image src={programsImage} width={{base:'70vw', md:'30vw'}} borderRadius="lg" alt="Programs Image" />
                 </Box>
+
             </Flex>
+    
+            
             <Box maxW="lg" mt={'3rem'} >
               <Heading as="h3" size="md" mb={6} color="gray.700">
                   Web Development Journey
@@ -202,7 +209,6 @@ const Home = () => {
           </VStack>
         </Container>
       </Box>
-
 
       {/* About Us Section */}
       <Box  py={10} px={4} my={2} id="about-us">
