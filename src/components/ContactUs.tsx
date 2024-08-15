@@ -24,11 +24,11 @@ const ContactUs = () => {
             Have questions or want to get in touch? We're here to help! Reach out to us via email or phone, and we'll get back to you as soon as possible.
           </Text>
           <Text display={'flex'} gap={'2'} alignItems={'center'}>
-            <Icon as={FaEnvelope} color="red.500" fontSize={'1.2rem'} /> contact@codeheroes.com
+            <Icon as={FaEnvelope} color="red.500" fontSize={'1.2rem'} /> codeheroeskids@gmail.com
            
           </Text>
           <Text display={'flex'} gap={'2'} alignItems={'center'}>
-            <Icon as={FaPhone} color="blue.500" fontSize={'1.2rem'} />  Phone: 123-456-7890
+            <Icon as={FaPhone} color="blue.500" fontSize={'1.2rem'} />  Phone: 403-700-6458
           </Text>
         </VStack>
       </Container>
