@@ -270,7 +270,7 @@ const Home = () => {
             <ParentOpinion 
               imageSrc={rasha} 
               parentName='Rasha Elkassas' 
-              opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
+              opinion= "It was always a wish to enroll my daughter in coding. We gave it a try and it worked really well. MY daughter really enjoyed the program. I wasn't sure until I attended her presentation at the end of the program and I was really impressed by her presentation and how she was able to create a web page with all the needed criteria and information. Thanks Mrs Inas for the dedicated  efforts and work with our children . I highly recommend the program and my daughter is looking forward for her next class. Thank again Mrs Inas "
             />
             <ParentOpinion 
               imageSrc={nohak} 
