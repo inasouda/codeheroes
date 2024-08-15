@@ -17,23 +17,37 @@ const ParentOpinion: React.FC<ParentOpinionProps> = ({ imageSrc, parentName, opi
   };
 
   // Decide what text to show
-  const previewText = showFullText ? opinion : `${opinion.slice(0, 100)}...`;
+  const previewText = showFullText ? opinion : `${opinion.slice(0, 250)}...`;
 
   return (
-    <Box p={4} borderWidth={1} mb={4} borderRadius="lg" boxShadow="lg" maxW="md" mx="auto" bg="white">
-      <Flex alignItems="center">
+    <Box
+      p={4}
+      borderWidth={1}
+      mb={4}
+      borderRadius="lg"
+      boxShadow="lg"
+      maxW={{ base: '90%', sm: '80%', md: '70%', lg: '60%' }}  // Responsive width
+      mx="auto"
+      bg="white"
+    >
+      <Flex alignItems="center" mb={4}>
         <Avatar src={imageSrc} objectFit="cover" size="lg" mr={4} />
-        <Text fontSize="md" fontWeight="bold" color="cyan.700">
+        <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight="bold" color="cyan.700">
           {parentName}
         </Text>
       </Flex>
-      <Box mt={4} maxH="70rem" maxW={'20rem'} overflow="hidden">
-        <Text fontSize="md" color="gray.600">
+      <Box mt={4} maxW="100%" overflow="hidden">
+        <Text fontSize={{ base: 'sm', md: 'md' }} color="gray.600">
           {previewText}
         </Text>
       </Box>
-      <Button mt={2} size="sm" onClick={toggleShowText}  colorScheme={showFullText ? 'red' : 'cyan'}
- variant="link">
+      <Button
+        mt={2}
+        size="sm"
+        onClick={toggleShowText}
+        colorScheme={showFullText ? 'red' : 'cyan'}
+        variant="link"
+      >
         {showFullText ? 'Show Less' : 'Show More'}
       </Button>
     </Box>

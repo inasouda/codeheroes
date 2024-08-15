@@ -45,6 +45,12 @@ const NavBar = () => {
         <Flex justifyContent="space-between" h='20' alignItems="center">
           <Image src={logo} maxH="4.5rem" alt="Logo" />
           <HStack spacing={4} display={{ base: 'none', md: 'flex' }}>
+          <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }}
+            onClick={() => handleScrollTo('')}
+
+            >
+              Home
+            </Button>
             <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }}
             onClick={() => handleScrollTo('mission')}
 
@@ -88,6 +94,10 @@ const NavBar = () => {
         <DrawerHeader>Menu</DrawerHeader>
         <DrawerBody paddingTop={'2rem'}>
           <VStack spacing={4} align="start">
+          <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }} onClick={() => {handleScrollTo('')}}>
+            
+            Home
+          </Button>
             <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }} onClick={() => {handleScrollTo('mission')}}>
             
               Our Mission

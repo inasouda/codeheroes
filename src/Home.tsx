@@ -120,12 +120,6 @@ const Home = () => {
           </Flex>
         </Container>
       </Box>
-
-      {/*Our Codeheroes section */}
-      {/* <Box py={8} px={4} bg="cyan.100" borderRadius="lg"> */}
-      <OurHeroes />
-        
-      {/* </Box> */}
       
       {/* Web Development Section */}
       <Box bg="#f0f4f8" py={12} px={4}  borderRadius="md" boxShadow="md" id="programs">
@@ -277,14 +271,18 @@ const Home = () => {
           </VStack>
         </Container>
       </Box>
-
+    {/*Our Codeheroes section */}
+      {/* <Box py={8} px={4} bg="cyan.100" borderRadius="lg"> */}
+      <OurHeroes />
+        
+      {/* </Box> */}
   {/* Parent Opinions Section */}
-  <Box py={10} px={4} mt={10} bg="cyan.500" borderRadius="lg">
+  <Box py={10} bg="cyan.500">
         <Container maxW="container.xl">
-          <Heading as="h2" size="lg" mb={8} textAlign="center" color="white">
+          <Heading as="h2" size="lg" mb={12} textAlign="center" color="white">
             What Parents Say
           </Heading>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={1}>
             <ParentOpinion 
               imageSrc={rasha} 
               parentName='Rasha Elkassas' 
@@ -293,7 +291,8 @@ const Home = () => {
             <ParentOpinion 
               imageSrc='' 
               parentName='Noha ElKaddah' 
-              opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
+              opinion='Thanks so much Inas for teaching this course that was a great opportunity for my daughter to learn new skills that will help in her career development and make better use of her time instead of just playing on her phone.     
+              I would like to mention what salma wrote "Thank u inas this means much to me. I had so much fun at code heroes, and I had so much fun 💗 - salma"' 
             />
             <ParentOpinion 
               imageSrc={lama}
