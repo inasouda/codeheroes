@@ -13,7 +13,7 @@ const ConfirmationPage: React.FC = () => {
     <Box textAlign="center" p={6}>
       <Heading mb={4} color={'cyan.600'}>Registration Successful!</Heading>
       <Text mb={4}>Thank you for registering. We have received your information and will contact you soon.</Text>
-      <Button onClick={handleGoHome} bg={"cyan.500"}>Go to Home</Button>
+      <Button onClick={handleGoHome} color={'white'} bg={"cyan.500"}>Go to Home</Button>
     </Box>
   );
 };
