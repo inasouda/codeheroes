@@ -26,8 +26,6 @@ import htmlImage from './assets/html.png';
 import cssImage from './assets/css.png';
 import jsImage from './assets/js.png';
 import bsImage from './assets/bootstrap.svg.png';
-
-import MyCarousel from './components/Carousel';
 import ContactUs from './components/ContactUs';
 import ParentOpinion from './components/ParentOpinion';
 import OurHeroes from './components/OurHeroes';
@@ -39,45 +37,23 @@ import rasha from './assets/rasha.jpg'
 
 const Home = () => {
 
-  const images = [
-    codeHeroesImage,
-  ];
 
   return (
     <Box fontFamily="Poppins, sans-serif">
-      {/* Image Carousel */}
-      <MyCarousel images={images} />
-      <Box
-        textAlign="center"
-      >
+      <Image
+              src={codeHeroesImage}
+              w="100%" // Set the width to 80%
+              objectFit="cover"
+              alt={`Codeheroes Image`}
+              h={{ base: '30rem', md: '40rem' }}
+            />
+      <Box textAlign="center">
          <Link to="/register">
             <Button colorScheme='red' color={'#fff'} size="lg" mt={4} leftIcon={<FaRocket />}>
-            REGISTER
+               REGISTER
             </Button>
         </Link>
       </Box>
-      {/* <Box display="flex" justifyContent="center" alignItems="center" position="relative">
-        <Image
-          src={imageSrc}
-          w="80%" // Set the width to 80%
-          objectFit="cover"
-          alt="Carousel"
-          h={{ base: '30rem', md: '40rem' }}
-        />
-        <Box
-          position="absolute"
-          top="50%"
-          left="50%"
-          transform="translate(-50%, -50%)"
-          textAlign="center"
-        >
-          <Button colorScheme="green" size="lg" mt={4} leftIcon={<FaRocket />}>
-            REGISTER
-          </Button>
-        </Box>
-      </Box> */}
-      
-
       {/* Mission Section */}
       <Box py={10} px={4} my={8} borderRadius="lg"  id="mission">
         <Container maxW="container.xl">
