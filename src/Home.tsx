@@ -306,6 +306,11 @@ const Home = () => {
               parentName='Nourham' 
               opinion='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam blanditiis asperiores consequuntur eum facilis! Eum, blanditiis praesentium, facere optio voluptatum ratione quibusdam, neque numquam hic molestiae autem animi unde assumenda.' 
             /> */}
+            <ParentOpinion 
+              imageSrc={''} 
+              parentName='Mohamed' 
+              opinion='Thank you, this program has really helped my kids improve their logical thinking.' 
+            />
           </SimpleGrid>
         </Container>
       </Box>
