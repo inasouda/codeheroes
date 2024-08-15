@@ -256,21 +256,25 @@ const Home = () => {
         </Container>
       </Box>
     {/*Our Codeheroes section */}
-      {/* <Box py={8} px={4} bg="cyan.100" borderRadius="lg"> */}
-      <OurHeroes />
-        
-      {/* </Box> */}
+      <Box id='our-heroes'>
+        <OurHeroes />
+       </Box>
   {/* Parent Opinions Section */}
-  <Box py={10} bg="cyan.500">
+  <Box py={10} bg="cyan.500" id='parents-opinion'>
         <Container maxW="container.xl">
           <Heading as="h2" size="lg" mb={12} textAlign="center" color="white">
             What Parents Say
           </Heading>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={1}>
+           <ParentOpinion 
+              imageSrc={lama}
+              parentName='Lama' 
+              opinion='My children are blessed and lucky to have such an incredible coding teacher like Ms. Inas. She is truly dedicated and genuinely passionate about her work. My children learned a lot from the program which they will carry with them for their future education journey. I DO highly recommend taking this program since it will definitely contribute to your children’s knowledge. Thank you Ms. Inas for all your invaluable efforts.' 
+            />
             <ParentOpinion 
               imageSrc={rasha} 
               parentName='Rasha Elkassas' 
-              opinion= "It was always a wish to enroll my daughter in coding. We gave it a try and it worked really well. MY daughter really enjoyed the program. I wasn't sure until I attended her presentation at the end of the program and I was really impressed by her presentation and how she was able to create a web page with all the needed criteria and information. Thanks Mrs Inas for the dedicated  efforts and work with our children . I highly recommend the program and my daughter is looking forward for her next class. Thank again Mrs Inas "
+              opinion= "It was always a wish to enroll my daughter in coding. We gave it a try and it worked really well. MY daughter really enjoyed the program. I wasn't sure until I attended her presentation at the end of the program and I was really impressed by her presentation and how she was able to create a web page with all the needed criteria and information. Thanks Mrs Inas for the dedicated  efforts and work with our children. I highly recommend the program and my daughter is looking forward for her next class. Thank again Mrs Inas "
             />
             <ParentOpinion 
               imageSrc={nohak} 
@@ -278,11 +282,7 @@ const Home = () => {
               opinion='Thanks so much Inas for teaching this course that was a great opportunity for my daughter to learn new skills that will help in her career development and make better use of her time instead of just playing on her phone.     
               I would like to mention what salma wrote "Thank u inas this means much to me. I had so much fun at code heroes, and I had so much fun 💗 - salma"' 
             />
-            <ParentOpinion 
-              imageSrc={lama}
-              parentName='Lama' 
-              opinion='My children are blessed and lucky to have such an incredible coding teacher like Ms. Inas. She is truly dedicated and genuinely passionate about her work. My children learned a lot from the program which they will carry with them for their future education journey. I DO highly recommend taking this program since it will definitely contribute to your children’s knowledge. Thank you Ms. Inas for all your invaluable efforts.' 
-            />
+         
             <ParentOpinion 
               imageSrc={noha}
               parentName='Noha Fathy' 

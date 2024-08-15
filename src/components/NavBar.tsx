@@ -93,9 +93,8 @@ const NavBar = () => {
         <DrawerCloseButton />
         <DrawerHeader>Menu</DrawerHeader>
         <DrawerBody paddingTop={'2rem'}>
-          <VStack spacing={4} align="start">
+          <VStack spacing={6} align="center">
           <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }} onClick={() => {handleScrollTo('')}}>
-            
             Home
           </Button>
             <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }} onClick={() => {handleScrollTo('mission')}}>
@@ -107,6 +106,12 @@ const NavBar = () => {
             </Button>
             <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }} onClick={() => {handleScrollTo('about-us')}}>
               About Us
+            </Button>
+            <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }} onClick={() => {handleScrollTo('our-heroes')}}>
+              Our Heroes
+            </Button>
+            <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }} onClick={() => {handleScrollTo('parents-opinion')}}>
+              Parent's Opinions
             </Button>
             <Button variant="link" colorScheme="cyan" sx={{ _hover: { color: 'red.500' } }} onClick={() => {handleScrollTo('contact-us')}}>
               Contact Us
