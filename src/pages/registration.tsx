@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import {
   Box,
-  Button,
   FormControl,
   FormLabel,
   Input,
@@ -15,7 +14,8 @@ import {
   useToast,
   SimpleGrid,
 } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import CHButton from '../components/CHButton';
 
 // Define the type for form data
 interface FormData {
@@ -77,14 +77,7 @@ const RegistrationForm: React.FC = () => {
     try {
       await axios.post('https://codeheroes-server-66c05a244ff2.herokuapp.com/api/v1/students', formData);
       navigate('/confirmation');
-      // Handle the response from the server
-      // toast({
-      //   title: 'Registration successful.',
-      //   description: response.data.message || 'Your registration has been successfully submitted.',
-      //   status: 'success',
-      //   duration: 5000,
-      //   isClosable: true,
-      // });
+ 
   
       // Optionally, you can reset the form or navigate to another page here
       setFormData({
@@ -359,20 +352,11 @@ const RegistrationForm: React.FC = () => {
       
         </SimpleGrid>
 
-        <Box mt={8}>
-          <Button
-            type="submit"
-            bgColor="blue.500"
-            color={'white'}
-            size="lg"
-            width="full"
-            isLoading={isSubmitting}
-            fontSize="1.2rem"
-            _hover={{ bgColor: "blue.600" }}
-          >
-            Submit
-          </Button>
+        <Box mt={8} display={'flex'} gap={'1rem'} justifyContent={'center'}>
+          <CHButton text={'Submit'} type="submit" colorScheme={'blue'}  color={'#fff'} size="lg"></CHButton>
+          <CHButton text={'Clear'}  colorScheme={'yellow'} type="reset" color={'white'} size="lg"></CHButton>
         </Box>
+        
       </form>
     </Box>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Button, Center, FormControl, FormLabel, Heading, Input, Radio, RadioGroup, Stack, useToast } from '@chakra-ui/react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import CHButton from '../components/CHButton';
 
 
 const FreeLessonForm: React.FC = () => {
@@ -117,21 +118,28 @@ const FreeLessonForm: React.FC = () => {
               </RadioGroup>
             </FormControl>
             
-            <Box mt={8}>
-              <Button
-                type="submit"
-                colorScheme="cyan"
-                color='white'
-                size="lg"
-                width="full"
-                isLoading={isSubmitting}
-                borderRadius="full"
-                fontSize="lg"
-                boxShadow="md"
-              >
-                Submit
-              </Button>
+            <Box 
+              mt={8} 
+              display={'flex'} 
+              gap='1rem' 
+              justifyContent='center'>
+                <CHButton 
+                  text = 'Submit'  
+                  colorScheme = 'cyan'
+                  type = 'submit' 
+                  color = 'white'
+                  size = 'lg'
+                ></CHButton>
+                <CHButton text={'Clear'}  
+                  colorScheme={'yellow'} 
+                  type="reset" 
+                  color={'white'} 
+                  size="lg">
+                </CHButton>
+
+            
             </Box>
+            
           </Stack>
         </form>
       </Box>

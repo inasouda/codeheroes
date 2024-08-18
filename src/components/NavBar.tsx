@@ -19,6 +19,7 @@ import {
 import { FaRocket, FaBars} from 'react-icons/fa';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
+import CHButton from './CHButton';
 
 
 const NavBar = () => {
@@ -117,9 +118,15 @@ const NavBar = () => {
               Contact Us
             </Button>
             <Link to="/free-lesson">
-              <Button colorScheme="red" leftIcon={<FaRocket />}  onClick={()=>onClose()}>
-                Try Free Lesson
-              </Button>
+                <CHButton 
+                  text={'Try Free Lesson'}
+                  colorScheme='red' 
+                  color={'#fff'} 
+                  size="lg" 
+                  leftIcon={<FaRocket />} 
+                  onClick={()=>onClose()}
+                  width=""
+                  ></CHButton>
             </Link>
           </VStack>
         </DrawerBody>

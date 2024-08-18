@@ -3,7 +3,6 @@ import {
   Box,
   Flex,
   Image,
-  Button,
   Heading,
   Text,
   Container,
@@ -35,6 +34,7 @@ import nohak from './assets/nohak.png'
 
 import rasha from './assets/rasha.jpg'
 import ProgramDetails from './components/ProgramDetails';
+import CHButton from './components/CHButton';
 
 
 
@@ -50,11 +50,16 @@ const Home = () => {
               alt={`Codeheroes Image`}
               h={{ base: '30rem', md: '40rem' }}
             />
-      <Box textAlign="center">
+      <Box textAlign="center" mt={4}>
          <Link to="/register">
-            <Button colorScheme='red' color={'#fff'} size="lg" mt={4} leftIcon={<FaRocket />}>
-               REGISTER
-            </Button>
+            <CHButton 
+              text={'REGISTER'} 
+              colorScheme='red'  
+              color={'#fff'} 
+              size="lg" 
+              leftIcon={<FaRocket />}
+              width="">
+            </CHButton>
         </Link>
       </Box>
       {/* Mission Section */}
