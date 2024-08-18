@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, Center, FormControl, FormLabel, Heading, Input, Radio, RadioGroup, Stack, useToast } from '@chakra-ui/react';
+import { Box, Center, FormControl, FormLabel, Heading, Input, Radio, RadioGroup, Stack, useToast } from '@chakra-ui/react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import CHButton from '../components/CHButton';
@@ -10,13 +10,13 @@ const FreeLessonForm: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [phone, setPhone] = useState<string>('');
   const [day, setDay] = useState<string>('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [ setIsSubmitting] = useState(false);
   const navigate = useNavigate();
   const toast = useToast(); // Initialize the toast
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    // setIsSubmitting(true);
 
     try {
       await axios.post('https://codeheroes-server-66c05a244ff2.herokuapp.com/api/v1/free-lesson', {
@@ -42,7 +42,7 @@ const FreeLessonForm: React.FC = () => {
         isClosable: true,
       });
     } finally {
-      setIsSubmitting(false);
+      // setIsSubmitting(false);
     }
   };
 

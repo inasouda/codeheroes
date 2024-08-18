@@ -14,7 +14,7 @@ import {
   useToast,
   SimpleGrid,
 } from '@chakra-ui/react';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import CHButton from '../components/CHButton';
 
 // Define the type for form data
@@ -47,7 +47,7 @@ const RegistrationForm: React.FC = () => {
     comments: '',
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
   const toast = useToast();
   const navigate = useNavigate();
 
@@ -72,7 +72,7 @@ const RegistrationForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    // setIsSubmitting(true);
   
     try {
       await axios.post('https://codeheroes-server-66c05a244ff2.herokuapp.com/api/v1/students', formData);
@@ -104,7 +104,7 @@ const RegistrationForm: React.FC = () => {
         isClosable: true,
       }); 
     } finally {
-      setIsSubmitting(false);
+      // setIsSubmitting(false);
     }
   };
 
