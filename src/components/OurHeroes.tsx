@@ -42,7 +42,7 @@ const OurHeroes: React.FC = () => {
   };
 
   return (
-    <Box py={10} px={4} bg="cyan.50" textAlign="center">
+    <Box id='our-heroes' py={10} px={4} bg="cyan.50" textAlign="center">
       <Heading
         display="flex"
         color="blue.600"
