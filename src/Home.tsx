@@ -1,11 +1,13 @@
 import '@fontsource/poppins'; 
+import {FaRocket} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 import {
   Box,
   Image,
 } from '@chakra-ui/react';
-import {FaRocket} from 'react-icons/fa';
-import codeHeroesImage from './assets/codeheroes8.png';
-import { Link } from 'react-router-dom';
+
+import codeHeroesImage from './assets/codeheroes8.webp';
 import ContactUs from './components/ContactUs';
 import OurHeroes from './components/OurHeroes';
 import CHButton from './components/CHButton';
@@ -15,7 +17,6 @@ import Mission from './components/Mission';
 import ParentOpinions from './components/ParentOpinions';
 
 const Home = () => {
-
   return (
     <Box fontFamily="Poppins, sans-serif">
       <Image
@@ -37,7 +38,7 @@ const Home = () => {
             </CHButton>
         </Link>
       </Box>
-      
+
       <Mission/>
       <WebDevelopment/>
       <AboutUs/>
