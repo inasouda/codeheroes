@@ -18,7 +18,7 @@ import ParentOpinions from './components/ParentOpinions';
 
 const Home = () => {
   return (
-    <Box fontFamily="Poppins, sans-serif">
+    <Box>
       <Image
               src={codeHeroesImage}
               w="100%" // Set the width to 80%
