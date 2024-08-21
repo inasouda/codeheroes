@@ -1,6 +1,6 @@
 import { Box, Container, Heading, Icon, Image, Text, VStack } from "@chakra-ui/react"
 import { FaCode, FaSuperpowers, FaUsers } from "react-icons/fa"
-import aboutUsImage from '../assets/logoi.png';
+import aboutUsImage from '../assets/logoi.webp';
 
 
 const AboutUs = () => {

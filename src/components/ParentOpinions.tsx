@@ -1,9 +1,9 @@
 import { Box, Container, Heading, SimpleGrid } from "@chakra-ui/react"
 import ParentOpinion from "./ParentOpinion"
-import lama from '../assets/lama.jpg'
-import noha from '../assets/noha.jpg'
-import nohak from '../assets/nohak.png'
-import rasha from '../assets/rasha.jpg'
+import lama from '../assets/lama.webp'
+import noha from '../assets/noha.webp'
+import nohak from '../assets/nohak.webp'
+import rasha from '../assets/rasha.webp'
 
 const ParentOpinions = () => {
   return (

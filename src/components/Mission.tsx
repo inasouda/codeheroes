@@ -1,5 +1,5 @@
 import { Box, Container, Flex, Heading, Icon, Image, List, ListIcon, ListItem } from '@chakra-ui/react'
-import missionImage from '../assets/ch2.jpg';
+import missionImage from '../assets/ch2.webp';
 import { FaAward, FaLightbulb } from 'react-icons/fa'
 
 const Mission = () => {

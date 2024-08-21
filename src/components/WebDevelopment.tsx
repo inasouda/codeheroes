@@ -1,10 +1,10 @@
 import { Box, Container, Flex, HStack, Heading, Icon, Image, Text, VStack } from '@chakra-ui/react'
 import ProgramDetails from './ProgramDetails'
-import htmlImage from '../assets/html.png';
-import cssImage from '../assets/css.png';
-import jsImage from '../assets/js.png';
+import htmlImage from '../assets/html.webp';
+import cssImage from '../assets/css.webp';
+import jsImage from '../assets/js.webp';
 import bsImage from '../assets/bootstrap.svg.png';
-import programsImage from '../assets/programs.jpg';
+import programsImage from '../assets/programs.webp';
 import { FaLaptopCode } from 'react-icons/fa';
 
 
