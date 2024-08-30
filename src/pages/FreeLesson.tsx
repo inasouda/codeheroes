@@ -111,9 +111,9 @@ const FreeLessonForm: React.FC = () => {
               <FormLabel htmlFor="day" fontSize="lg" fontWeight="medium" color="gray.600">Preferred Lesson Day</FormLabel>
               <RadioGroup id="day" value={day} onChange={(value) => setDay(value)}>
                 <Stack direction="column">
-                  <Radio value="Friday Aug 30, 5:00PM">Friday Aug 30, 5:00PM</Radio>
-                  <Radio value="Saturday Aug 31, 5:00PM">Saturday Aug 31, 5:00PM</Radio>
-                  <Radio value="Friday Sep 6, 5:00PM">Friday Sep 6, 5:00PM</Radio>
+                  <Radio value="Monday Sep 16, 5:00PM">Monday, September 16 at 5:00 PM</Radio>
+                  <Radio value="Saturday Sep 20, 6:00PM">Saturday, September 20 at 6:00 PM</Radio>
+                  <Radio value="contactus">Contact us to request a different day</Radio>
                 </Stack>
               </RadioGroup>
             </FormControl>

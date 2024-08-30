@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Heading, Text, Stack, Divider } from '@chakra-ui/react';
 
 const ProgramDetails: React.FC = () => {
-  const startDate = new Date('2024-09-04');
+  const startDate = new Date('2024-09-16');
   const endDate = new Date('2025-06-27');
   const duration = `${startDate.toDateString()} to ${endDate.toDateString()}`;
   const lessonSchedule = "One lesson per week, 2 hours each";
