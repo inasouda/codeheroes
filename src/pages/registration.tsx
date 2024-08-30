@@ -320,7 +320,7 @@ const RegistrationForm: React.FC = () => {
                       <option value="Monday">Monday at 6 PM (2 hours)</option>
                       <option value="Wednesday">Wednesday at 6:30 PM (2 hours)</option>
                       <option value="Thursday">Thursday at 6:30 PM (2 hours)</option>
-                      <option value="Friday">Thursday at 6 PM (2 hours)</option>
+                      <option value="Friday">Friday at 6 PM (2 hours)</option>
                     </Select>
                   </FormControl>
                 </Stack>
