@@ -66,10 +66,6 @@ const RegistrationForm: React.FC = () => {
     setFormData((prev) => ({ ...prev, codingExperience: value }));
   };
 
-  const handleLessonDayChange = (value: string) => {
-    setFormData((prev) => ({ ...prev, lessonDay: value }));
-  };
-
   const handlePhotoConsentChange = (value: string) => {
     setFormData((prev) => ({ ...prev, photoConsent: value }));
   };
@@ -80,7 +76,6 @@ const RegistrationForm: React.FC = () => {
   
     try {
       await axios.post('https://codeheroes-server-66c05a244ff2.herokuapp.com/api/v1/students', formData);
-      // await axios.post('localhost:3000/api/v1/students',formData)
       navigate('/confirmation');
  
   
@@ -310,44 +305,24 @@ const RegistrationForm: React.FC = () => {
                     </RadioGroup>
                   </FormControl>
 
-                  <FormControl as="fieldset" isRequired>
-                    {/* <label  style={{color:'green',marginBottom:'5em'}}> */}
-                      {/* Note: The program will begin on the day you select, starting from September 16. */}
-                    {/* </label> */}
-
-                    <FormLabel fontSize="lg" fontWeight="medium" color="gray.600">
-                      Choose your lesson day
-                    </FormLabel>
-               
-                    <RadioGroup
-                      onChange={handleLessonDayChange}
+                  <FormControl id="lessonDay" isRequired>
+                  <FormLabel fontSize="lg" fontWeight="medium" color="gray.600">Choose your lesson day</FormLabel>
+                    <Select
+                      id="lessonDay"
+                      placeholder="Select a day"
                       value={formData.lessonDay}
+                      onChange={handleChange}
+                      borderRadius="md"
+                      borderColor="gray.300"
+                      _focus={{ borderColor: "cyan.400", boxShadow: "none" }}
+                      fontSize="1rem"
                     >
-                      <Stack direction="column">
-                      <FormLabel  style={{color:'green'}}>
-                        For Prev Student:
-                      </FormLabel>
-                        <Radio value="Wednesday" colorScheme="cyan">
-                          Wednesday at 6:30 PM (2 hours)
-                        </Radio>
-                        <Radio value="Thursday" colorScheme="cyan">
-                          Thursday at 6:30 PM (2 hours)
-                        </Radio>
-                        <FormLabel  style={{color:'green'}}>
-                        For Prev Student:
-                      </FormLabel>
-
-                        <Radio value="Monday" colorScheme="cyan">
-                            Monday at 6: PM (2 hours)
-                        </Radio>
-                        <Radio value="Friday" colorScheme="cyan">
-                          Friday at 6 PM (2 hours)
-                        </Radio>
-                      </Stack>
-
-                    </RadioGroup>
+                      <option value="Monday">Monday at 6 PM (2 hours)</option>
+                      <option value="Wednesday">Wednesday at 6:30 PM (2 hours)</option>
+                      <option value="Thursday">Thursday at 6:30 PM (2 hours)</option>
+                      <option value="Friday">Thursday at 6 PM (2 hours)</option>
+                    </Select>
                   </FormControl>
-
                 </Stack>
               </Box>
 
